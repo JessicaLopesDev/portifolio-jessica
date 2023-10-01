@@ -26,8 +26,6 @@ export const navData = [
   },
 ];
 
-const Nav = () => {
+export const Nav = () => {
   return <nav>nav</nav>;
 };
-
-export default Nav;
