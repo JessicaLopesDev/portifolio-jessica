@@ -14,7 +14,7 @@ const Home = () => {
           className="text-center flex flex-col justify-center xl:pt-40 xl:text-left
           h-full container mx-auto"
         >
-          <motion.h1 variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden" className="h1">
+          <motion.h1 variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit="hidden" className="h1 mt-10">
             Transforming Ideas <br />
             Into
             <span className="text-accent"> Digital Reality</span>
@@ -24,12 +24,12 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-1 xl:mb-16"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi
             similique accusantium nemo autem. Veritatis obcaecati tenetur
           </motion.p>
-          <div className="flex justify-center xl:hidden relative">
+          <div className="flex justify-center xl:hidden relative mt-10">
             <ProjectsBtn />
           </div>
           <motion.div
