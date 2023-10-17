@@ -30,11 +30,13 @@ const aboutData = [
     info: [
       {
         title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012'
+        stage: '2011 - 2012',
+        icons: []
       },
       {
         title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010'
+        stage: '2009 - 2010',
+        icons: []
       }
     ]
   },
@@ -43,15 +45,18 @@ const aboutData = [
     info: [
       {
         title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023'
+        stage: '2012 - 2023',
+        icons: []
       },
       {
         title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012'
+        stage: '2010 - 2012',
+        icons: []
       },
       {
         title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010'
+        stage: '2008 - 2010',
+        icons: []
       }
     ]
   },
@@ -60,15 +65,18 @@ const aboutData = [
     info: [
       {
         title: 'Web Development - ABC University, LA, CA',
-        stage: '2011'
+        stage: '2011',
+        icons: []
       },
       {
         title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009'
+        stage: '2009',
+        icons: []
       },
       {
         title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006'
+        stage: '2006',
+        icons: []
       }
     ]
   }
@@ -111,10 +119,22 @@ const About = () => {
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
-                <div key={itemIndex}>
-                  <div>{item.title}</div>
+                <div
+                  key={itemIndex}
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                >
+                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
                   <div className="hidden md:flex">-</div>
                   <div>{item.stage}</div>
+                  <div className="flex gap-x-4">
+                    {item.icons.map((icon, itemIndex) => {
+                      return (
+                        <div key={itemIndex} className="text-2xl text-white">
+                          {icon}
+                        </div>
+                      )
+                    })}
+                  </div>
                 </div>
               )
             })}
